@@ -1,25 +1,34 @@
 <html>
 <head>
 <title>HTML Calculator</title>
+<style>
+td {
+text-align: center
+}
+</style>
 </head>
 <body bgcolor="PowderBlue" text="gold">
 <form name="calculator" >
-<input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-<input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-<input type="button" value="3" onClick="document.calculator.ans.value+='3'">
-<input type="button" value="+" onClick="document.calculator.ans.value+='+'">
-<input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-<input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-<input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-<input type="button" value="-" onClick="document.calculator.ans.value+='-'">
-<input type="button" value="7" onClick="document.calculator.ans.value+='7'">
-<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-<input type="button" value="*" onClick="document.calculator.ans.value+='*'">
-<input type="button" value="/" onClick="document.calculator.ans.value+='/'">
-<input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-<input type="reset" value="Reset">
-<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+<table><tr><td><input type="button" value="1" onClick="document.calculator.ans.value+='1'"></td>
+<td><input type="button" value="2" onClick="document.calculator.ans.value+='2'"></td>
+<td><input type="button" value="3" onClick="document.calculator.ans.value+='3'"></td>
+<td><input type="button" value="DEL" onClick="document.calculator.ans.value=document.calculator.ans.value.slice(0,document.calculator.ans.value.length-1)"></td>
+<td><input type="reset" value="AC"></td></tr>
+<tr><td><input type="button" value="4" onClick="document.calculator.ans.value+='4'"></td>
+<td><input type="button" value="5" onClick="document.calculator.ans.value+='5'"></td>
+<td><input type="button" value="6" onClick="document.calculator.ans.value+='6'"></td>
+<td><input type="button" value="+" onClick="document.calculator.ans.value+='+'"></td>
+<td><input type="button" value="-" onClick="document.calculator.ans.value+='-'"></td></tr>
+<tr><td><input type="button" value="7" onClick="document.calculator.ans.value+='7'"></td>
+<td><input type="button" value="8" onClick="document.calculator.ans.value+='8'"></td>
+<td><input type="button" value="9" onClick="document.calculator.ans.value+='9'"></td>
+<td><input type="button" value="*" onClick="document.calculator.ans.value+='*'"></td>
+<td><input type="button" value="/" onClick="document.calculator.ans.value+='/'"></td></tr>
+<tr><td></td>
+<td><input type="button" value="0" onClick="document.calculator.ans.value+='0'"></td>
+<td><input type="button" value="." onClick="document.calculator.ans.value+='.'"></td>
+<td><input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)"></td></tr>
+</table>
 <br>En het antwoord is......<input type="textfield" name="ans" value="">
 </form>
 </body>
