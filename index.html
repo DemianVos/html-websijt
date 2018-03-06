@@ -80,6 +80,35 @@ onclick="document.getElementById('demo').innerHTML = Date()">
 Hoe laat is het?</button>
   </p1>
   <p id="demo"></p>
+  <br><br>
+  <p id="vraag">Hoe heet je?</p>
+<input id="antwoord" autocapitalize="none"><button onclick="vraag()">Zo heet ik.</button>
+<script>
+var antwoorden = ["je"]
+function vraag() {
+var antwoord = document.getElementById("antwoord").value
+document.getElementById("antwoord").value = ""
+var goed = true
+var i;
+for (i=0;i<antwoorden.length;i++) {
+if (antwoorden[i] == antwoord) {
+goed = false
+}
+}
+antwoorden[antwoorden.length] = antwoord
+if (goed) {
+document.getElementById("vraag").innerHTML = "Hoi "+antwoord+"!"
+} else {
+var i;
+var text = ""
+for (i=0;i<antwoorden.length-1;i++) {
+text = text+"Hoe heet"+antwoorden[i]+"?<br>"+antwoorden[i+1]+"<br><br>"
+}
+document.body.innerHTML = text
+}
+document.getElementById("antwoord").focus()
+}
+</script>
   <br>
   <br>
   <hr>
