@@ -36,11 +36,6 @@ text-align: center
   <button type="button" onclick="alert('dan krijg je dit bericht binnen.')">als je hier klikt,</button>
 <br>
 <p1>
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-En als je hier klikt, weet je hoe laat het is.</button>
-  </p1>
-  <p id="demo"></p>
   <hr>
   
 </body>
@@ -70,5 +65,10 @@ function checkTime(i) {
 
 <div id="txt"></div>
 
+ <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+De laatste keer dat je op deze knop hebt gedrukt, was het:</button>
+  </p1>
+  <p id="demo"></p>
 </body>
 </html>
