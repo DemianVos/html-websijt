@@ -7,11 +7,11 @@ text-align: center
 }
 </style>
 </head>
-<body bgcolor="PowderBlue" text="black">
+<body bgcolor="PowderBlue" text="black" onload="startTime()">
   <h1>Mijn html-website</h1>
   <p1>
-    Voor mijn schoolproject ben ik gaan leren html-websites te coderen.Html is een soort codetaal voor een computer.</p1> <br>
-  <h2>hoe heb ik dit gedaan?</h2>
+    Voor mijn schoolproject ben ik gaan leren html-websites te coderen. Html is een soort codetaal voor een computer.</p1> <br>
+  <h2>Hoe heb ik dit gedaan?</h2>
   <p1>Ik heb eerst met  <br><a href="https://www.w3schools.com/html/default.asp">deze website</a> de basis van de taal geleerd.<br>
   Toen ben ik dit gaan uitproberen. Ik maakte eerst simpele 'test'-websites, zoals <br><a href="https://files.itslearning.com/data/450/401111/website.html?">deze</a>, 
     en toen heb ik <br><a href="https://www.demiancubesolving.wordpress.com">een veel grotere en praktische website</a> gecodeerd.
@@ -22,7 +22,7 @@ text-align: center
 <table><tr><td><input type="button" value="1" onClick="document.calculator.ans.value+='1'"></td>
 <td><input type="button" value="2" onClick="document.calculator.ans.value+='2'"></td>
 <td><input type="button" value="3" onClick="document.calculator.ans.value+='3'"></td>
-<td><input type="button" value="oeps" onClick="document.calculator.ans.value=document.calculator.ans.value.slice(0,document.calculator.ans.value.length-1)"></td>
+<td><input type="button" value="oeps" onClick="document.calculator.ans.value=document.calculator.ans.value.slice(0,-1)"></td>
 <td><input type="reset" value="resetten"></td></tr>
 <tr><td><input type="button" value="4" onClick="document.calculator.ans.value+='4'"></td>
 <td><input type="button" value="5" onClick="document.calculator.ans.value+='5'"></td>
@@ -47,10 +47,6 @@ text-align: center
 <p1>
   <hr>
   
-</body>
-  <!DOCTYPE html>
-<html>
-<head>
 <p1>Dit zijn 2 klokken, de eerste loopt door, en de tweede laat de tijd zijn van het moment wanneer je erop klikt.</p1> 
 <script>
 function startTime() {
@@ -69,9 +65,6 @@ function checkTime(i) {
     return i;
 }
 </script>
-</head>
-
-<body onload="startTime()">
 
 <div id="txt"></div>
 
@@ -81,7 +74,7 @@ Hoe laat is het?</button>
   </p1>
   <p id="demo"></p>
   <p id="vraag">Hoe heet je?</p>
-<input id="antwoord" autocapitalize="none"><button onclick="vraag()">Zo heet ik.</button>
+<input id="antwoord"><button onclick="vraag()">Zo heet ik.</button>
 <script>
 function vraag() {
 var antwoord = document.getElementById("antwoord").value
